@@ -4,7 +4,6 @@ import {
   StyleSheet
 } from 'react-native'
 import RootNavigation from './navigation/root-navigation'
-
 import { ActionSheetProvider} from '@expo/react-native-action-sheet'
 
 class AppView extends Component {

@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, Button} from 'react-native';
-import Dialog, {DialogFooter, DialogButton, DialogContent } from 'react-native-popup-dialog';
+import Dialog, {DialogContent } from 'react-native-popup-dialog';
 
 class HomeScreen extends Component {
   constructor(props){
@@ -13,7 +13,7 @@ class HomeScreen extends Component {
  }
 
   llegadaPost(){
-    fetch('http://192.168.1.2:3000/llegada', {
+    fetch('http://172.18.204.2:3000/llegada', {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify({

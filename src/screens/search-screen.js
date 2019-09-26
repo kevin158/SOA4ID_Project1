@@ -17,13 +17,13 @@ class SearchScreen extends Component {
  }
  
   componentDidMount() {
-    fetch('http://192.168.1.2:3000/hello')
+    fetch('http://172.18.204.2:3000/hello')
       .then(res => res.json())
       .then(mesas => this.setState({mesas}));    
   }
 
   reservarPost(mesaSeleccionada){
-    fetch('http://192.168.1.2:3000/reservar', {
+    fetch('http://172.18.204.2:3000/reservar', {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify({

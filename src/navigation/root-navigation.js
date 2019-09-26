@@ -1,8 +1,9 @@
 import React from 'react'
 import { StackNavigator } from 'react-navigation'
 
-import MainTabNavigator from './main-tab-navigator'
 import { colors } from '../config/theme'
+
+import MainTabNavigator from './main-tab-navigator'
 
 const navigationOptions = {
   headerStyle: {
@@ -33,4 +34,3 @@ export default class RootNavigator extends React.Component {
     return <RootStackNavigator />
   }
 }
-

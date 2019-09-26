@@ -4,6 +4,7 @@ import * as Font from "expo-font";
 import { Asset } from "expo-asset";
 import { AppLoading } from "expo";
 import { Ionicons } from "@expo/vector-icons";
+
 import AppView from "./src";
 
 export default class App2 extends React.Component {

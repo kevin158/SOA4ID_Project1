@@ -1,31 +1,19 @@
 
 import React from "react";
 import { 
-  Platform, 
-  StatusBar, 
-  Button,
   StyleSheet, 
   View, 
   Text, 
   TextInput,
   TouchableOpacity 
 } from "react-native";
-import * as Font from "expo-font";
-import { Asset } from "expo-asset";
-import { AppLoading } from "expo";
-import { Ionicons } from "@expo/vector-icons";
-import AppView from "./src";
-
-import { createStackNavigator, createAppContainer } from 'react-navigation'; 
 
 import App2 from './App2';
-
 
 export default class App1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoadingComplete: false,
       userName: '',
       password: '',
       usuarioServer: '',
@@ -36,7 +24,7 @@ export default class App1 extends React.Component {
   }
 
   signUp() {
-    fetch('http://192.168.1.2:3000/user')
+    fetch('http://172.18.204.2:3000/user')
       .then(res => res.json())
       .then(usuarios => this.setState({usuarios}));  
   }
@@ -95,16 +83,9 @@ export default class App1 extends React.Component {
       )
     } 
     else {
-      return (  
-        <View style={styles.container}>  
-            <Button
-            title= "Mesa 1"
-            onPress={() => {
-              this.props.navigation.navigate('App2');
-            }}
-          />
-        </View>  
-      ) 
+      return ( 
+          <App2/>
+      ); 
     }  
   }
 }
